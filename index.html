@@ -1,14 +1,14 @@
 <html>
   <head>
-    <title>Breakout</title>
+    <title>Breakout by Atari</title>
   </head>
   <body>
     <canvas width="500" height="500" id="ctx" style="border:2px solid #000000"/>
     <script type="text/javascript">
 
       var ctx = document.getElementById('ctx').getContext('2d');
-      var WIDTH = 500;
-      var HEIGHT = 500;
+      var WIDTH = 5000;
+      var HEIGHT = 5000;
       var numOfEnemies,enemyList,score,intervalVar,running,hitCount;
       ctx.font = '20px Calibri';
       ctx.fillText("Click me to start the game",150,250);
@@ -202,9 +202,9 @@
         hitCount = 0;
         ball.spdX = -3;
         ball.spdY = -3;
-        for (var i=1;i<=6;i++) {
+        for (var i=1; i<=6; i++) {
           enemyX = 5;
-          for(var j=1;j<=11;j++) {
+          for(var j=1; j<=11; j++) {
             enemyList[numOfEnemies] = {x:enemyX,y:enemyY};
             numOfEnemies++;
             enemyX += 45;
